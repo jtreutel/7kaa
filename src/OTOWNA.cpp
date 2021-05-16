@@ -278,7 +278,7 @@ void TownArray::think_new_independent_town()
 			independentTownCount++;
 	}
 
-	if( independentTownCount >= 10 )		// only when the no. of independent town is less than 10
+	if( independentTownCount >= 20 )		// only when the no. of independent town is less than 10
 		return;
 
 	//--- if the total population of all nations combined > 1000, then no new independent town will emerge ---//
