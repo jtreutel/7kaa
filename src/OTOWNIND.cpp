@@ -130,12 +130,12 @@ void Town::think_independent_set_link()
 //
 int Town::think_independent_form_new_nation()
 {
-	if( misc.random(10) > 0 )		// 1/10 chance to set up a new nation.
+	if( misc.random(2) > 0 )		// 1/2 chance to set up a new nation.
 		return 0;
 
 	//-------- check if the town is big enough -------//
 
-	if( population < 30 )
+	if( population < 16 )
 		return 0;
 
 	//---- don't form if the world is already densely populated ----//
@@ -206,9 +206,9 @@ int Town::form_new_nation()
 	Unit* kingUnit = unit_array[kingUnitRecno];
 
 	kingUnit->skill.skill_id = SKILL_LEADING;
-	kingUnit->skill.skill_level = 50+misc.random(51);
+	kingUnit->skill.skill_level = 30+misc.random(71);
 
-	kingUnit->set_combat_level(70+misc.random(31));
+	kingUnit->set_combat_level(10+misc.random(91));
 
 	nation_array[nationRecno]->set_king(kingUnitRecno, 1);		// 1-this is the first king of the nation
 
@@ -239,15 +239,15 @@ int Town::form_new_nation()
 			break;
 
 		case 2:		// random additional cash
-			nationPtr->cash += misc.random(5000);
+			nationPtr->cash += misc.random(20000);
 			break;
 
 		case 3:		// random additional food
-			nationPtr->food += misc.random(5000);
+			nationPtr->food += misc.random(20000);
 			break;
 
 		case 4:		// random additional skilled units
-			mobileCount = misc.random(5)+1;
+			mobileCount = misc.random(15);
 
 			for( i=0 ; i<mobileCount && recruitable_race_pop(raceId,0)>0 ; i++ )		// 0-don't recruit spies
 			{
