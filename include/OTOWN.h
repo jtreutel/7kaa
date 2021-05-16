@@ -46,8 +46,8 @@
 
 //------- define constant --------//
 
-#define MAX_TOWN_GROWTH_POPULATION  60		// grow up to 60 persons in a town
-#define MAX_TOWN_POPULATION  60		// MAX number of units in a town
+#define MAX_TOWN_GROWTH_POPULATION  90		// grow up to 60 persons in a town
+#define MAX_TOWN_POPULATION  90		// MAX number of units in a town
 
 //-------- Define constant -----------//
 
@@ -79,7 +79,7 @@
 
 #define RECEIVED_HIT_PER_KILL			 (200/ATTACK_SLOW_DOWN)	 // no. of received hits will result in one death of town people
 
-#define MAX_TRAIN_QUEUE					10
+#define MAX_TRAIN_QUEUE					20
 
 //-------- Define class Town ----------//
 
