@@ -36,7 +36,7 @@
 
 //---- at least wait for 1 year after a nation is deleted before setting up a new nation. ---//
 
-#define NEW_NATION_INTERVAL_DAYS		365
+#define NEW_NATION_INTERVAL_DAYS		30
 
 struct NewNationPara;
 
